@@ -25,7 +25,6 @@ string IncDecSt(string st){
     }
   }
   return res;
-  cout<<len<<endl;
 }
 
 int main(){
