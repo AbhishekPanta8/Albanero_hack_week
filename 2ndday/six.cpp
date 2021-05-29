@@ -26,7 +26,7 @@ int main(){
     return 0;
   }
   int *arr = new int[n];
-  int *arr2 = new int[n];
+  int *arr2 = new int[2];
   cout<<"Enter the elements in the array."<<endl;
   for(int i=0;i<n;i++){
     cin>>arr[i];
