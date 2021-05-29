@@ -7,7 +7,6 @@ string IncDecSt(string st){
     Charcount[ch -'a']++;
   }
   string res ="";
-  int len = sizeof(Charcount)/sizeof(Charcount[0]);
   int count = st.size();
   while(count>0){
     for(int i=0;i<26;i++){
