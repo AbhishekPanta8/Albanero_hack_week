@@ -5,10 +5,10 @@ struct node{
   struct node *next;
 };
 struct node * CreateNode(int value){
-  struct node *temp=new node;
-  temp->data=value;
-  temp->next =NULL;
-  return temp;
+  struct node *newnode=new node;
+  newnode->data=value;
+  newnode->next =NULL;
+  return newnode;
 }
 struct node * Groupoddeven(struct node *start){
   if(start == NULL)
