@@ -5,12 +5,24 @@ struct node{
   struct node *next;
 };
 
-void swapAdjacent(struct node *start){
-  struct node *temp = start;
-  while(temp != NULL && temp->next != NULL){
-    swap(temp->data,temp->next->data);
-    temp=temp->next->next;
-  }
+struct node* swapAdjacent(struct node *start){
+ struct node *ptr1,*start2,*temp,*ptr2;
+ if(start==NULL || start->next==NULL)
+  return start;
+ ptr1=start;
+ start2=ptr1->next;
+ while(1){
+   ptr2=ptr1->next;
+   temp=ptr2->next;
+   ptr2->next=ptr1;
+   if(temp==NULL || temp->next==NULL){
+     ptr1->next =NULL;
+     break;
+   }
+   ptr1->next=temp->next;
+   ptr1=temp;
+ }
+ return start2;
 }
 
 struct node * CreateNode(int value){
